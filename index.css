@@ -83,9 +83,38 @@ h6 {
   justify-content: center;
   align-content: center;
   border: 2px dashed lightcoral;
-  min-height: 20em;
+  min-height: 10em;
 }
 
+.intro-wrapper {
+  background-color: var(--secondaryColor);
+  border: 1px solid var(--borderColor);
+  box-shadow: 15px 20px 15px -13px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 15px 20px 15px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 15px 20px 15px -13px rgba(0, 0, 0, 0.75);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "nav-wrapper nav-wrapper"
+    "left-column right-column";
+}
+
+.nav-wrapper {
+  grid-area: nav-wrapper;
+
+  border: 1px dashed lightcoral;
+}
+.left-column {
+  grid-area: left-column;
+
+  border: 1px dashed lightcoral;
+}
+.right-column {
+  grid-area: right-column;
+
+  border: 1px dashed lightcoral;
+}
 @media screen and (max-width: 1200px) {
   .main-container {
     width: 95%;
