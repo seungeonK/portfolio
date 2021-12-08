@@ -6,13 +6,17 @@
 
   --mainText: #000;
   --secondaryText: #4b6156;
+
+  --themeDotBorder: #24292e;
 }
 html,
 body {
   padding: 0;
   margin: 0;
 }
-
+div {
+  border: 1px dashed #000;
+}
 h1,
 h2,
 h3,
@@ -156,10 +160,69 @@ h6 {
 }
 .left-column {
   grid-area: left-column;
+  border: 1px dashed #000;
+}
+
+#profile_pic {
+  display: block;
+  margin: 0 auto;
+
+  height: 200px;
+  width: 200px;
+  /* make sure no matter what the size of img is, it'll position it in*/
+  object-fit: cover;
+
+  border: 2px solid var(--borderColor);
+}
+#theme-options-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.theme-dot {
+  height: 30px;
+  width: 30px;
+
+  background-color: #000;
+
+  border-radius: 50%;
+  border: 2px solid var(--themeDotBorder);
+
+  margin: 5px;
+
+  box-shadow: -1px -1px 3px -1px rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: -1px -1px 3px -1px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: -1px -1px 3px -1px rgba(0, 0, 0, 0.9);
+
+  /* when mouse hovers on buttons */
+  cursor: pointer;
+}
+
+.theme-dot:hover {
+  border-width: 5px;
+}
+
+#light-mode {
+  background-color: #fff;
+}
+#blue-mode {
+  background-color: blue;
+}
+#green-mode {
+  background-color: green;
+}
+#purple-mode {
+  background-color: purple;
+}
+
+#setting-notes {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
 }
 .right-column {
   grid-area: right-column;
 }
+
 @media screen and (max-width: 1200px) {
   .main-container {
     width: 95%;
