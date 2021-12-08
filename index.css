@@ -41,4 +41,16 @@ textarea {
 .s2 {
   background-color: var(--secondaryColor);
   border-bottom: 1px solid var(--borderColor);
+  overflow: auto;
+}
+
+.main-container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: 95%;
+  }
 }
