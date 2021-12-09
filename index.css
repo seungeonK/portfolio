@@ -7,9 +7,11 @@
   --mainText: #000;
   --secondaryText: #4b6156;
 
+  --textHover: silver;
+
   --themeDotBorder: #24292e;
 
-  --previeBg: rgb(251, 249, 243, 0.8);
+  --previewBg: rgb(251, 249, 243, 0.8);
 
   --previewShadow: #f0ead6;
 }
@@ -19,12 +21,13 @@ body {
   margin: 0;
 }
 
-a:hover {
-  color: #000;
+body *{
+    transition: 0.3s;
 }
-/* div {
-  border: 1px dashed #000;
-} */
+a:hover {
+  color: var(--textHover);
+}
+
 h1,
 h2,
 h3,
@@ -46,9 +49,10 @@ textarea {
   color: var(--secondaryText);
   font-family: "Roboto Mono", monospace;
 }
+
 a {
   text-decoration: none;
-  color: #17a2b8;
+  color: var(--mainText);
 }
 
 ul {
@@ -131,6 +135,7 @@ h6 {
   margin: 0;
   padding: 10px;
 }
+
 #navigation > li {
   display: inline-block;
   margin-right: 5px;
@@ -215,7 +220,7 @@ h6 {
   background-color: #fff;
 }
 #blue-mode {
-  background-color: blue;
+  background-color: 15202b;
 }
 #green-mode {
   background-color: green;
@@ -248,7 +253,7 @@ h6 {
 #preview {
   width: 300px;
   border: 1.5px solid #17a2b8;
-  background-color: var(--previeBg);
+  background-color: var(--previewBg);
   padding: 15px;
   position: relative;
 }
