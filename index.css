@@ -280,15 +280,66 @@ h6 {
 }
 .about-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
 
   text-align: center;
   /* auto-fit: auto fit as many columns as we can*/
   /* minmax(): column shouldn't be smaller than 320px */
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  padding-bottom: 50px;
 }
+
 #skills {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--previewShadow);
+  max-width: 700px;
+  margin: auto;
 }
+
+.post-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 320px);
+  gap: 20px;
+  justify-content: center;
+
+  padding-bottom: 50px;
+}
+
+.thumbnail {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.post {
+  border: 1px solid var(--borderColor);
+}
+
+.post-preview {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.post-title {
+  color: black;
+  margin: 0;
+  text-align: center;
+}
+
+.post-intro {
+  color: #4b5156;
+  font-size: 16px;
+}
+
+.post-url {
+  display: inline-block;
+  background-color: var(--previewShadowr);
+  width: 50px;
+  border-radius: 50%;
+}
+
 @media screen and (max-width: 1200px) {
   .main-container {
     width: 95%;
