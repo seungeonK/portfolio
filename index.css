@@ -15,6 +15,7 @@
 
   --previewShadow: #f0ead6;
 }
+
 html,
 body {
   padding: 0;
@@ -343,6 +344,14 @@ h6 {
   background-color: var(--previewShadowr);
   width: 50px;
   border-radius: 50%;
+}
+
+.post-url a{
+    color: #000;
+}
+
+.post-url a:hover{
+    color: var(--textHover);
 }
 
 @media screen and (max-width: 1200px) {
